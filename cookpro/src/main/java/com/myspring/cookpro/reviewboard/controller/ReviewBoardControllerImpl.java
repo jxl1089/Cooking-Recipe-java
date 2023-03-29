@@ -1,5 +1,6 @@
 package com.myspring.cookpro.reviewboard.controller;
 
+<<<<<<< HEAD
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.web.servlet.ModelAndView;
@@ -62,5 +63,8 @@ public class ReviewBoardControllerImpl implements ReviewBoardController{
 		// TODO Auto-generated method stub
 		return null;
 	}
+=======
+public class ReviewBoardControllerImpl {
+>>>>>>> branch 'master' of https://github.com/jxl1089/Cooking-Recipe-java.git
 
 }

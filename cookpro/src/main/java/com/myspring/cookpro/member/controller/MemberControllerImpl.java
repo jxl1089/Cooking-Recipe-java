@@ -67,6 +67,7 @@ public class MemberControllerImpl {
 	@RequestMapping(value = "/member/addMember.do", method = RequestMethod.POST)
 	public void addMember(@ModelAttribute("member") MemberDTO member,
 			HttpServletRequest request, HttpServletResponse response) throws Exception {
+<<<<<<< HEAD
 		 // °¡ÀÔ È®ÀÎ Ã¢&dbÁßº¹ È®ÀÎ&ÀÌ¸ÞÀÏÀÎÁõ¹øÈ£&¸ðµçÇ×¸ñÀÔ·Â
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
@@ -79,6 +80,20 @@ public class MemberControllerImpl {
 			out.print("location.href='"+request.getContextPath()+"/'");
 		} else {
 			out.print("alert('È¸¿ø°¡ÀÔ¿¡ ½ÇÆÐÇÏ¿´½À´Ï´Ù. ´Ù½Ã ½ÃµµÇØÁÖ¼¼¿ä.');");
+=======
+		 // ê°€ìž… í™•ì¸ ì°½&dbì¤‘ë³µ í™•ì¸&ì´ë©”ì¼ì¸ì¦ë²ˆí˜¸&ëª¨ë“ í•­ëª©ìž…ë ¥
+		response.setContentType("text/html;charset=UTF-8");
+		PrintWriter out = response.getWriter();
+
+		int result = memberService.addMember(member);
+		
+		out.print("<script>");
+		if(result == 1) {
+			out.print("alert('íšŒì›ê°€ìž…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤!');");
+			out.print("location.href='"+request.getContextPath()+"/'");
+		} else {
+			out.print("alert('íšŒì›ê°€ìž…ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì‹œë„í•´ì£¼ì„¸ìš”.');");
+>>>>>>> branch 'master' of https://github.com/jxl1089/Cooking-Recipe-java.git
 			out.print("location.href='"+request.getContextPath()+"/member/memberForm.do'");
 		}
 		out.print("</script>");
