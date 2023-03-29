@@ -1,4 +1,4 @@
-package com.myspring.cookpro.common.intercetor;
+package com.myspring.cookpro.common.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
