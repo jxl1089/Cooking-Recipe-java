@@ -67,7 +67,7 @@ public class MemberControllerImpl {
 	@RequestMapping(value = "/member/addMember.do", method = RequestMethod.POST)
 	public void addMember(@ModelAttribute("member") MemberDTO member,
 			HttpServletRequest request, HttpServletResponse response) throws Exception {
-		 // °¡ÀÔ È®ÀÎ Ã¢&dbÁßº¹ È®ÀÎ&ÀÌ¸ŞÀÏÀÎÁõ¹øÈ£&¸ğµçÇ×¸ñÀÔ·Â
+		 // ê°€ì… í™•ì¸ ì°½&dbì¤‘ë³µ í™•ì¸&ì´ë©”ì¼ì¸ì¦ë²ˆí˜¸&ëª¨ë“ í•­ëª©ì…ë ¥
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 
@@ -75,10 +75,10 @@ public class MemberControllerImpl {
 		
 		out.print("<script>");
 		if(result == 1) {
-			out.print("alert('È¸¿ø°¡ÀÔÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù!');");
+			out.print("alert('íšŒì›ê°€ì…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤!');");
 			out.print("location.href='"+request.getContextPath()+"/'");
 		} else {
-			out.print("alert('È¸¿ø°¡ÀÔ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù. ´Ù½Ã ½ÃµµÇØÁÖ¼¼¿ä.');");
+			out.print("alert('íšŒì›ê°€ì…ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì‹œë„í•´ì£¼ì„¸ìš”.');");
 			out.print("location.href='"+request.getContextPath()+"/member/memberForm.do'");
 		}
 		out.print("</script>");
