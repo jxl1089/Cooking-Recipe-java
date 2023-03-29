@@ -31,7 +31,7 @@
 			<td width="400"><input type="text" name="id"></td>
 		</tr>
 		<tr align="center">
-			<td width="200" align="right">암호</td>
+			<td width="100" align="right">암호</td>
 			<td width="400"><input type="password" name="pwd"></td>
 		</tr>
 		<tr>
