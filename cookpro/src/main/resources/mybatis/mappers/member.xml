@@ -13,22 +13,24 @@
 	</resultMap>
 	
 	
-	
+	<!-- 회원가입 -->
 	<insert id="insertMember" parameterType="memberDTO">
 		<![CDATA[
 			insert into user_board values(#{id}, #{pwd}, #{email}, #{name}, #{gender}, sysdate)
 		]]>
 	</insert>
 	
-	<select id="selectById" parameterType="String" resultType="int">
+	<!-- 아이디 중복체크 -->
+	<select id="checkById" parameterType="String" resultType="int">
 		<![CDATA[
 			select count(*) from user_board where id=#{id}
 		]]>
 	</select>
 	
-	<select id="selectByEmail" parameterType="String" resultType="boolean">
+	<!-- 로그인 -->
+	<select id="loginById" parameterType="memberDTO" resultType="memberDTO">
 		<![CDATA[
-			select decode(count(*),1,'false','true') from user_board where email=#{email}
+			select * from user_board where id=#{id} and pwd=#{pwd}
 		]]>
 	</select>
 	

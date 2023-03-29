@@ -19,15 +19,17 @@ public class MemberDAOImpl implements MemberDAO{
 	}
 
 	@Override
-	public int selectById(String id) {
+	public int checkById(String id) {
 		// TODO Auto-generated method stub
-		return sqlSession.selectOne("mapper.member.selectById", id);
+		return sqlSession.selectOne("mapper.member.checkById", id);
 	}
 
 	@Override
-	public boolean selectByEmail(String email) {
+	public MemberDTO loginById(MemberDTO member) {
 		// TODO Auto-generated method stub
-		return sqlSession.selectOne("mapper.member.selectByEmail", email);
+		member = sqlSession.selectOne("mapper.member.loginById", member);
+		
+		return member;
 	}
 
 }
