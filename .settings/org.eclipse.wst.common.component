@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Cooking-Recipe-java-master">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/Cooking-Recipe-java-master/cookpro/src/main/java"/>
+        <property name="context-root" value="Cooking-Recipe-java-master"/>
+        <property name="java-output-path" value="/Cooking-Recipe-java-master/Cooking-Recipe-java-master/bin"/>
+    </wb-module>
+</project-modules>
